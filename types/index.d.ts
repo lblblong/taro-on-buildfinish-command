@@ -1,6 +1,10 @@
 import type { IPluginContext } from '@tarojs/service';
 interface IPluginOpts {
-    commands: string[];
+    onBuildStart?: string[];
+    modifyWebpackChain?: string[];
+    modifyBuildAssets?: string[];
+    onBuildFinish?: string[];
+    onBuildComplete?: string[];
 }
 /**
  * 编译过程扩展
